@@ -1,5 +1,7 @@
 # this is to write about the logger file
 
+# https://docs.python.org/3/library/logging.html consult the documentation for further use of the logger files in the projects
+
 import logging
 import os
 from datetime import datetime
@@ -18,3 +20,5 @@ logging.basicConfig(
     format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
 )
+
+

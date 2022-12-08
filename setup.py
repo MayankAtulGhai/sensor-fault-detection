@@ -29,6 +29,6 @@ setup(
       install_requires=get_requirements(),
 )
 
-# after this run python setup.py install to setup the requirements by using setup.py file
+# after this run # https://docs.python.org/3/library/logging.html consult the documentation for further use of the logger files in the projects to setup the requirements by using setup.py file
 
 # or we can use pip install -r requirements.txt

@@ -12,7 +12,7 @@ class MongoDBClient:
         try:
 
             if MongoDBClient.client is None:
-                mongo_db_url = "mongodb+srv://Mayankatulghai:Maa2365@cluster0.hbpypnh.mongodb.net/?retryWrites=true&w=majority"
+                mongo_db_url = os.getenv(MONGODB_URL_KEY)
                 print(mongo_db_url)
                 if "localhost" in mongo_db_url:
                     MongoDBClient.client = pymongo.MongoClient(mongo_db_url) 
@@ -22,4 +22,4 @@ class MongoDBClient:
             self.database = self.client[database_name]
             self.database_name = database_name
         except Exception as e:
-            raise e
+            raise 

@@ -1,0 +1,1 @@
+# the output of every component is called artifact

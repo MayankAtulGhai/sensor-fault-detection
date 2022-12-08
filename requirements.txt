@@ -1,4 +1,5 @@
 pymongo[srv]==4.2.0
 certifi
+from-root
 
 # we can also use -e . at the end of the requirements.txt and this will be equivalent to find_packages in setup.py file
