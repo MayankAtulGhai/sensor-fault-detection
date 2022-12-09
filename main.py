@@ -28,4 +28,6 @@ if __name__ == '__main__':
     # print(data_ingestion_config.__dict__)
 
     train_pipeline = TrainPipeline()
+    logging.info("Starting Data Ingestion") 
+    logging.info("Data Ingestion Completed")
     train_pipeline.run_pipeline
