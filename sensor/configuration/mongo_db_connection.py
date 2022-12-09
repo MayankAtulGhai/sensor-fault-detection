@@ -3,7 +3,6 @@ from sensor.constant.database import DATABASE_NAME
 from sensor.constant.env_variable import MONGODB_URL_KEY
 import certifi
 import os
-
 ca = certifi.where()
 
 class MongoDBClient:
@@ -22,4 +21,4 @@ class MongoDBClient:
             self.database = self.client[database_name]
             self.database_name = database_name
         except Exception as e:
-            raise 
+            raise e

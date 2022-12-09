@@ -1,4 +1,4 @@
-from sensor.confirguration.mongo_db_connection import MongoDBClient
+from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.exception import SensorException
 import os,sys
 from sensor.logger import logging
@@ -28,6 +28,4 @@ if __name__ == '__main__':
     # print(data_ingestion_config.__dict__)
 
     train_pipeline = TrainPipeline()
-    logging.info("Starting Data Ingestion") 
-    logging.info("Data Ingestion Completed")
     train_pipeline.run_pipeline
