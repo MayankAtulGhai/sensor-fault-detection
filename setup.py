@@ -32,3 +32,7 @@ setup(
 # after this run # https://docs.python.org/3/library/logging.html consult the documentation for further use of the logger files in the projects to setup the requirements by using setup.py file
 
 # or we can use pip install -r requirements.txt
+
+# wget -O dataset  https://raw.githubusercontent.com/avnyadav/sensor-fault-detection/main/aps_failure_training_set1.csv
+# to the the dataset use this command and add it to git
+
