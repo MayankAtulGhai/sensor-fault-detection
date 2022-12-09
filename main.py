@@ -28,4 +28,4 @@ if __name__ == '__main__':
     # print(data_ingestion_config.__dict__)
 
     train_pipeline = TrainPipeline()
-    train_pipeline.run_pipeline
+    train_pipeline.run_pipeline()

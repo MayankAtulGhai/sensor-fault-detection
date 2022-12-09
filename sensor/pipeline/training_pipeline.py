@@ -3,19 +3,25 @@ from sensor.entity.artifact_entity import DataIngestionArtifact
 from sensor.exception import SensorException
 import sys, os
 from sensor.logger import logging
+from sensor.components .data_ingestion import DataIngestion
 
 class TrainPipeline:
 
     def __init__(self):
-        trainig_pipeline_config = TrainingPipelineConfig()
-        self.data_ingestion_config = DataIngestionConfig(training_pipeline_config=trainig_pipeline_config)
-        self.trainig_pipeline_config = trainig_pipeline_config
+        self.trainig_pipeline_config = TrainingPipelineConfig()
+       
 
 
     def start_date_ingestion(self): #DataIngestionArtifact will be returned
         try:
+
+            self.data_ingestion_config = DataIngestionConfig(training_pipeline_config=self.trainig_pipeline_config)
             logging.info("Starting Data Ingestion") 
-            logging.info("Data Ingestion Completed") 
+            data_ingestion = DataIngestion(data_ingestion_config=self.data_ingestion_config)
+            data_ingestion_artifact = data_ingestion.initiate_data_ingestion() 
+            logging.info(f"Data Ingestion Completed and artifact: {data_ingestion_artifact}") 
+            return data_ingestion_artifact
+
         except Exception as e:
             raise SensorException(e, sys)
 
